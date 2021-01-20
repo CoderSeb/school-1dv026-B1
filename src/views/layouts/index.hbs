@@ -13,10 +13,13 @@
 </head>
 
 <body>
-  <main role="main" class="container">
-    <h1>Site works?</h1>
-  </main>
+  <div class="main-container">
+    {{> header }}
 
+    {{{ body }}}
+
+    {{> footer }}
+  </div>
 
   <!-- Bootstrap: jQuery and JS bundle w/ Popper.js -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
