@@ -1,3 +1,27 @@
-<div class="register-container">
-  <h1>Register</h1>
+<div class="register-container d-flex justify-content-center mt-5 text-light">
+  <form action="/register" method="post">
+    <div class="form-group">
+      <label for="registrationInputEmail">Email address</label>
+      <input type="email" class="form-control" name="email" id="registrationInputEmail" aria-describedby="emailHelp"
+        placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-info">We'll never share your email with anyone
+        else.</small>
+    </div>
+    <div class="form-group">
+      <label for="registrationInputUsername">Username</label>
+      <input type="text" class="form-control" name="username" id="registrationInputUsername"
+        aria-describedby="emailHelp" placeholder="Enter username">
+    </div>
+    <div class="form-group">
+      <label for="registrationInputPassword">Password</label>
+      <input type="password" class="form-control" name="passphrase" id="registrationInputPassword"
+        placeholder="Password">
+    </div>
+    <div class="form-check mb-2">
+      <input type="checkbox" class="form-check-input" id="registrationShowPassword">
+      <label class="form-check-label" for="registrationShowPassword">Show Password</label>
+    </div>
+    <button type="submit" value="Submit" class="btn btn-primary">Register</button>
+    <a href="/login" class="btn btn-secondary float-right">Login</a>
+  </form>
 </div>
