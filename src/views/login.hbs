@@ -1,13 +1,12 @@
 <div class="login-container d-flex justify-content-center mt-5 text-light">
-  <form>
+  <form action="/login" method="post">
     <div class="form-group">
-      <label for="exampleInputEmail1">Email address/Username</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-        placeholder="Enter email/username">
+      <label for="exampleInputUsername1">Username</label>
+      <input type="text" class="form-control" id="exampleUsername1" name="username" placeholder="Enter username">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <input type="password" class="form-control" name="passphrase" id="exampleInputPassword1" placeholder="Password">
     </div>
     <div class="form-check mb-2">
       <input type="checkbox" class="form-check-input" id="loginShowPassword">
