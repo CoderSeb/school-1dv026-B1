@@ -7,9 +7,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        {{#if authorizedUser}}
+        <div class="nav-item dropdown">
+          <a href="/snippets" class="nav-link dropdown-toggle" data-toggle="dropdown">Snippets</a>
+          <div class="dropdown-menu">
+            <a href="/snippets/new" class="dropdown-item">Create new</a>
+            <a href="/snippets" class="dropdown-item">Overview</a>
+          </div>
+        </div>
+        {{else}}
         <li class="nav-item">
           <a class="nav-link" href="/snippets">Snippets</a>
         </li>
+        {{/if}}
         {{#unless authorizedUser}}
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
@@ -19,6 +29,7 @@
     </div>
     {{#if authorizedUser}}
     <form class="float-right" action="/logout" method="post">
+      <p class="text-light float-left mr-3">Logged in as, {{user}}</p>
       <button class="btn btn-warning">Logout</button>
     </form>
     {{/if}}
