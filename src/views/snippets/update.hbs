@@ -1,11 +1,14 @@
 <div class="snippets-container-new text-center mx-auto">
   {{#if infoToSend}}
-  <form action="/snippets/update/{{id}}?_method=PUT" method="post">
+  <form action="/snippets/update/{{infoToSend.id}}" method="POST">
     <div class="form-group">
       <h2 class="text-light"><strong>{{user}}</strong></h2>
-      <h3 name="snippetNameUpdate">{{infoToSend.name}}</h3>
+      <label for="snippetNameUpdate" class="text-light">Title</label>
+      <input class="form-control bg-dark text-light" name="snippetNameUpdate" id="snippetNameUpdate"
+        value="{{infoToSend.name}}" />
     </div>
     <div class="form-group">
+      <label for="snippetContentUpdate" class="text-light">Content</label>
       <textarea class="form-control bg-dark text-light" id="snippetTextAreaInput"
         name="snippetContentUpdate">{{infoToSend.content}}</textarea>
     </div>
