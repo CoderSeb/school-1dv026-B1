@@ -9,10 +9,10 @@
           class="text-left pre-scrollable text-info p-1 bg-dark"><code>{{content}}</code></pre>
       </div>
       {{#if canEdit}}
-      <form action="/snippets/update/{{id}}?_method=GET" method="GET">
+      <form action="./snippets/update/{{id}}?_method=GET" method="GET">
         <button type="submit" class="btn btn-warning m-1">Modify</button>
       </form>
-      <form action="/snippets/{{id}}?_method=DELETE" method="POST">
+      <form action="./snippets/{{id}}?_method=DELETE" method="POST">
         <button type="submit" class="btn btn-danger m-1">Remove</button>
       </form>
       {{/if}}
