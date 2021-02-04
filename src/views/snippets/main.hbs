@@ -1,0 +1,22 @@
+<div class="snippets-container justify-content-center my-3">
+  <div class="row justify-content-lg-center" style="width:100%;">
+    {{#each snippetPayload.allSnippets}}
+    <div class="card bg-secondary text-light text-center col-lg-5 m-1 p-2">
+      <p><i>Created {{createdAt}} by {{createdBy}}.</i></p>
+      <div class="card-body" style="width:100%;">
+        <h4 class="card-title text-warning">{{name}}</h4>
+        <pre style="height:80%; min-height:5rem;"
+          class="text-left pre-scrollable text-info p-1 bg-dark"><code>{{content}}</code></pre>
+      </div>
+      {{#if canEdit}}
+      <form action="./snippets/update/{{id}}?_method=GET" method="GET">
+        <button type="submit" class="btn btn-warning m-1">Modify</button>
+      </form>
+      <form action="./snippets/{{id}}?_method=DELETE" method="POST">
+        <button type="submit" class="btn btn-danger m-1">Remove</button>
+      </form>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+</div>

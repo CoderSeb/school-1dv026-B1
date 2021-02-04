@@ -1,0 +1,16 @@
+<div class="snippets-container-new text-center mx-auto">
+  <form action="./snippets/new" method="post">
+    <div class="form-group">
+      <h2 class="text-light"><strong>{{user}}</strong></h2>
+    </div>
+    <div class="form-group">
+      <label for="snippetNameInput" class="text-light">Name of your snippet</label>
+      <input type="text" class="form-control text-light bg-dark" name="snippetName" />
+    </div>
+    <div class="form-group">
+      <label for="snippetTextAreaInput" class="text-light">Enter your code snippet here...</label>
+      <textarea class="form-control bg-dark text-light" id="snippetTextAreaInput" name="snippetContent"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+  </form>
+</div>
